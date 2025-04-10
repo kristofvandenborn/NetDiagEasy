@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetDiagEasy Diagram Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    #canvas {
+      border: 1px solid #ccc;
+      background: #fff;
+      width: 100%;
+      height: 600px;
+      position: relative;
+    }
+    .icon {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+    }
+    .icon img {
+      width: 100%;
+    }
+    .label {
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>NetDiagEasy Diagram Viewer</h1>
+  <div id="canvas"></div>
+
+  <script>
+    // Sample diagram data (replace with GPT-exported JSON)
+    const diagram = [
+      {
+        "type": "switch",
+        "vendor": "Cisco",
+        "label": "Switch A",
+        "icon": "stencils/cisco/switch_2960.svg",
+        "x": 100,
+        "y": 100
+      },
+      {
+        "type": "switch",
+        "vendor": "Cisco",
+        "label": "Switch B",
+        "icon": "stencils/cisco/switch_2960.svg",
+        "x": 300,
+        "y": 100
+      },
+      {
+        "type": "switch",
+        "vendor": "Cisco",
+        "label": "Switch C",
+        "icon": "stencils/cisco/switch_2960.svg",
+        "x": 200,
+        "y": 250
+      },
+      {
+        "type": "pc",
+        "vendor": "Generic",
+        "label": "PC 1",
+        "icon": "stencils/generic/pc.svg",
+        "x": 100,
+        "y": 300
+      },
+      {
+        "type": "pc",
+        "vendor": "Generic",
+        "label": "PC 2",
+        "icon": "stencils/generic/pc.svg",
+        "x": 300,
+        "y": 300
+      },
+      {
+        "type": "pc",
+        "vendor": "Generic",
+        "label": "PC 3",
+        "icon": "stencils/generic/pc.svg",
+        "x": 200,
+        "y": 400
+      }
+    ];
+
+    const canvas = document.getElementById('canvas');
+    diagram.forEach(device => {
+      const icon = document.createElement('div');
+      icon.className = 'icon';
+      icon.style.left = device.x + 'px';
+      icon.style.top = device.y + 'px';
+
+      const img = document.createElement('img');
+      img.src = device.icon;
+      icon.appendChild(img);
+
+      const label = document.createElement('div');
+      label.className = 'label';
+      label.innerText = device.label;
+      icon.appendChild(label);
+
+      canvas.appendChild(icon);
+    });
+  </script>
+</body>
+</html>
+

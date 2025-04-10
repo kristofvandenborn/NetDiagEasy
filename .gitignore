@@ -1,0 +1,32 @@
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Node (if you ever use Node.js or React)
+node_modules/
+dist/
+build/
+
+# Python (if any scripts exist later)
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Editor and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backup files
+*~
+*.bak
+*.tmp
+*.old
+
+# Logs
+*.log
+
+# System files
+ehthumbs.db
+Desktop.ini

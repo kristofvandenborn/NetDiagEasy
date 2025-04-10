@@ -1,0 +1,22 @@
+{
+  "Cisco": {
+    "switch_2960": "stencils/cisco/switch_2960.svg",
+    "router": "stencils/cisco/router.svg",
+    "firewall": "stencils/cisco/firewall.svg"
+  },
+  "Juniper": {
+    "router": "stencils/juniper/router.svg",
+    "firewall": "stencils/juniper/firewall.svg"
+  },
+  "Paloalto": {
+    "firewall": "stencils/paloalto/firewall.svg"
+  },
+  "Dell": {
+    "server": "stencils/dell/server.svg"
+  },
+  "Generic": {
+    "pc": "stencils/generic/pc.svg",
+    "laptop": "stencils/generic/laptop.svg",
+    "server": "stencils/generic/server.svg"
+  }
+}
